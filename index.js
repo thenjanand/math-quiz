@@ -6,3 +6,9 @@
 // On submit answer will be compared with random generated answer
 // If answer will be correct then score will be incremented
 // If answer will be wrong then score will be decremented
+
+const randomNumber = (min,max) => {
+return Math.floor(Math.random()*(max-min+1)+min);
+};
+
+console.log(randomNumber(1,10));
