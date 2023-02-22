@@ -8,7 +8,9 @@
 // If answer will be wrong then score will be decremented
 const questionEl = document.getElementById("question");
 const questionFormEl = document.getElementById("questionForm");
+const scoreEl = document.getElementById("score");
 let storedAnswer;
+let score=0;
 
 const randomNumber = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1) + min);
@@ -35,9 +37,17 @@ const showQuestion = () => {
 
 showQuestion();
 
-const checkAnswer = (e) => {
-  e.preventDefault();
+const checkAnswer = (event) => {
+  event.preventDefault();//used to stop reloading of pages
   const formData = new FormData(questionFormEl);
-
-  console.log(formData);
+  const userAnswer = +formData.get("answer");//unary Operator is used to convert string to int
+  if (userAnswer === storedAnswer) {
+    score += 1;
+  } else {
+    score -= 1;
+  }
+  scoreEl.innerText = score;
+  event.target.reset(); //used to reset the input field
+  showQuestion()
+  console.log(score);
 };
