@@ -6,6 +6,12 @@
 // On submit answer will be compared with random generated answer
 // If answer will be correct then score will be incremented
 // If answer will be wrong then score will be decremented
+
+//Generate 4 types of question
+//for subtract first number should be greater than second number
+//Store the score in local storage and display the score in the
+//Give feedback to the user using toast
+
 const questionEl = document.getElementById("question");
 const questionFormEl = document.getElementById("questionForm");
 const scoreEl = document.getElementById("score");
