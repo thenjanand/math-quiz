@@ -1,3 +1,4 @@
+// what we have to do is written in comments
 // Create a Math Question
 // Math Question will have a random generated
 // Question Type Mujltiplication question with random number range 1-10
@@ -11,6 +12,7 @@
 //for subtract first number should be greater than second number
 //Store the score in local storage and display the score in the
 //Give feedback to the user using toast
+
 
 const questionEl = document.getElementById("question");
 const questionFormEl = document.getElementById("questionForm");
